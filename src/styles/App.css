@@ -245,7 +245,8 @@ h1, h2, h3, h4, h5, h6 {
 .hero-title {
   font-size: 3.5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--text-light), var(--accent-green));
+  background: #fff;
+  /* linear-gradient(135deg, var(--text-light), var(--accent-green)); */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -253,7 +254,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: var(--text-gray);
+  color: #d6d6d6;
+  /* var(--text-gray); */
   margin-bottom: 2rem;
   max-width: 800px;
   margin-left: auto;
@@ -762,7 +764,7 @@ button, a, input, select, textarea {
 /* Hero Slider Styles */
 .hero-slider-container {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   overflow: hidden;
 }
 

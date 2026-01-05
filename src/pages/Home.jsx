@@ -299,15 +299,15 @@ const Home = () => {
       title: "Professional Forex Trading",
       subtitle: "9 Years of Market Expertise",
       image:
-        "https://cdn.pixabay.com/photo/2020/05/21/11/08/banner-5200274_1280.jpg",
-      highlight: "#00ff88",
+        "https://cdn.pixabay.com/photo/2020/11/24/11/48/commercial-5772300_1280.jpg",
+      highlight: "#ffffffff",
     },
     {
       id: 2,
       title: "Risk-Controlled Strategies",
       subtitle: "5% Max Daily Loss Protection",
       image:
-        "https://cdn.pixabay.com/photo/2016/07/31/16/24/banner-1559398_1280.jpg",
+        "https://cdn.pixabay.com/photo/2020/11/24/11/48/commercial-5772300_1280.jpg",
       highlight: "#ffd700",
     },
     {
@@ -315,7 +315,7 @@ const Home = () => {
       title: "100% Deposit Bonus",
       subtitle: "Double Your Trading Capital",
       image:
-        "https://cdn.pixabay.com/photo/2020/05/19/10/52/banner-5190181_1280.jpg",
+        "https://cdn.pixabay.com/photo/2020/03/04/06/03/stock-4900647_1280.jpg",
       highlight: "#00ff88",
     },
     {
@@ -323,7 +323,7 @@ const Home = () => {
       title: "Live Trade Monitoring",
       subtitle: "Full Transparency & Real-time Updates",
       image:
-        "https://cdn.pixabay.com/photo/2020/05/18/08/53/banner-5185284_1280.jpg",
+        "https://cdn.pixabay.com/photo/2018/07/23/12/05/stock-exchange-3556719_1280.jpg",
       highlight: "#ffd700",
     },
   ];
@@ -713,7 +713,7 @@ const Home = () => {
       <section
         className="who-we-are-section"
         style={{
-          padding: "100px 0",
+          padding: "10px 0",
           background: "linear-gradient(135deg, #0a1a3a 0%, #1a2b4a 100%)",
         }}
       >
