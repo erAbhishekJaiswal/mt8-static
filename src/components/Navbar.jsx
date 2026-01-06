@@ -91,13 +91,13 @@ const Navbar = () => {
         <div className="header-bar-top-inner">
           <div className="header-bar-phones">
             <FaMobileAlt />
-            <a className="header-kit-icons" href="tel:+910000000000">
-              +91 0000000000
+            <a className="header-kit-icons" href="tel:+917304426176">
+              +91 7304426176
             </a>
-            <span className="divider">/</span>
-            <a className="header-kit-icons" href="tel:+910000000000">
-              +91 0000000000
-            </a>
+            {/* <span className="divider">/</span>
+            <a className="header-kit-icons" href="tel:+917304426176">
+              +91 7304426176
+            </a> */}
           </div>
 
           <div className="header-bar-social">

@@ -50,7 +50,7 @@ const Footer = () => {
           <h4>Contact Info</h4>
           <ul>
             <li style={{ color: '#94a3b8' }}>support@mt8.com</li>
-            <li style={{ color: '#94a3b8' }}>+91 0000000000</li>
+            <li style={{ color: '#94a3b8' }} href="tel:+917304426176">+91 7304426176</li>
             <li style={{ color: '#94a3b8' }}>24/7 Support Available</li>
             <li style={{ color: '#94a3b8' }}>Global Headquarters</li>
           </ul>

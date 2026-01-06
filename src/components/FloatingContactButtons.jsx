@@ -8,8 +8,8 @@ const FloatingContactButtons = () => {
   const [showCallModal, setShowCallModal] = useState(false);
   const [showWhatsappModal, setShowWhatsappModal] = useState(false);
 
-  const phoneNumber = '+15551234567'; // Replace with actual number
-  const whatsappNumber = '+15551234567'; // Replace with actual WhatsApp number
+  const phoneNumber = '+917304426176'; // Replace with actual number
+  const whatsappNumber = '+917304426176'; // Replace with actual WhatsApp number
   const whatsappMessage = encodeURIComponent("Hello MT8! I'm interested in your forex trading services. Can you please provide more information?");
 
   const handleCallClick = () => {
@@ -112,7 +112,7 @@ const FloatingContactButtons = () => {
                   justifyContent: 'center',
                   cursor: 'pointer',
                   boxShadow: '0 5px 25px rgba(37, 211, 102, 0.4)',
-                  fontSize: '1.5rem'
+                  fontSize: '1rem'
                 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -302,7 +302,7 @@ const FloatingContactButtons = () => {
                 <div style={{ fontSize: '0.9rem', color: '#94a3b8', marginBottom: '0.5rem' }}>
                   Primary Support Line
                 </div>
-                <div style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#00ff88' }}>
+                <div style={{ fontSize: '0.9rem', fontWeight: 'bold', color: '#00ff88' }}>
                   {phoneNumber}
                 </div>
               </div>
@@ -318,7 +318,7 @@ const FloatingContactButtons = () => {
                     borderRadius: '30px',
                     cursor: 'pointer',
                     fontWeight: 'bold',
-                    fontSize: '1rem',
+                    fontSize: '0.8rem',
                     flex: 1
                   }}
                 >
@@ -334,7 +334,7 @@ const FloatingContactButtons = () => {
                     padding: '12px 30px',
                     borderRadius: '30px',
                     cursor: 'pointer',
-                    fontSize: '1rem',
+                    fontSize: '0.8rem',
                     flex: 1
                   }}
                 >
@@ -408,7 +408,7 @@ const FloatingContactButtons = () => {
               </div>
               
               <h3 style={{ marginBottom: '0.5rem' }}>WhatsApp Support</h3>
-              <p style={{ color: '#94a3b8', marginBottom: '1.5rem' }}>
+              <p style={{ color: '#94a3b8', marginBottom: '0.5rem' }}>
                 Message us directly on WhatsApp for quick assistance
               </p>
               
@@ -421,7 +421,7 @@ const FloatingContactButtons = () => {
                 <div style={{ fontSize: '0.9rem', color: '#94a3b8', marginBottom: '0.5rem' }}>
                   WhatsApp Number
                 </div>
-                <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#25D366' }}>
+                <div style={{ fontSize: '0.8rem', fontWeight: 'bold', color: '#25D366' }}>
                   {whatsappNumber}
                 </div>
               </div>
@@ -448,11 +448,11 @@ const FloatingContactButtons = () => {
                     background: 'linear-gradient(135deg, #25D366, #128C7E)',
                     color: 'white',
                     border: 'none',
-                    padding: '12px 30px',
+                    padding: '5px 15px',
                     borderRadius: '30px',
                     cursor: 'pointer',
                     fontWeight: 'bold',
-                    fontSize: '1rem',
+                    fontSize: '0.9rem',
                     flex: 1,
                     display: 'flex',
                     alignItems: 'center',
@@ -470,10 +470,10 @@ const FloatingContactButtons = () => {
                     background: 'transparent',
                     color: '#94a3b8',
                     border: '1px solid #94a3b8',
-                    padding: '12px 30px',
+                    padding: '5px 15px',
                     borderRadius: '30px',
                     cursor: 'pointer',
-                    fontSize: '1rem',
+                    fontSize: '0.9rem',
                     flex: 1
                   }}
                 >

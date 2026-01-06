@@ -541,7 +541,7 @@ const Home = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
-              initial={{ opacity: 0, scale: 1.05 }}
+              initial={{ opacity: 0, scale: 1 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 1.05 }}
               transition={{ duration: 0.8 }}
@@ -721,7 +721,7 @@ const Home = () => {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(245px, 1fr))",
               gap: "4rem",
               alignItems: "center",
             }}
@@ -738,9 +738,9 @@ const Home = () => {
 
               <p
                 style={{
-                  fontSize: "1.1rem",
+                  fontSize: "0.9rem",
                   lineHeight: "1.8",
-                  marginBottom: "1.5rem",
+                  marginBottom: "0.5rem",
                   color: "#e2e8f0",
                 }}
               >
@@ -753,9 +753,9 @@ const Home = () => {
 
               <p
                 style={{
-                  fontSize: "1.05rem",
+                  fontSize: "0.9rem",
                   lineHeight: "1.8",
-                  marginBottom: "2rem",
+                  marginBottom: "1rem",
                   color: "#cbd5e1",
                 }}
               >
@@ -944,9 +944,9 @@ const Home = () => {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentTestimonial}
-                initial={{ opacity: 0, x: 100 }}
+                initial={{ opacity: 0, x: 10 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
+                exit={{ opacity: 0, x: -10 }}
                 transition={{ duration: 0.5 }}
                 className="testimonial-card"
                 style={{
@@ -954,9 +954,11 @@ const Home = () => {
                   backdropFilter: "blur(10px)",
                   border: "1px solid rgba(255, 255, 255, 0.1)",
                   borderRadius: "15px",
-                  padding: "2.5rem",
-                  margin: "0 20px",
+                  padding: "1.5rem",
+                  margin: "0 10px",
                   position: "relative",
+                  width: "100%",
+                  boxSizing: "border-box",
                 }}
               >
                 {/* Quote Icon */}
@@ -1145,7 +1147,7 @@ const Home = () => {
               onClick={prevTestimonial}
               style={{
                 position: "absolute",
-                left: "-60px",
+                left: "20px",
                 top: "50%",
                 transform: "translateY(-50%)",
                 background: "rgba(0,0,0,0.5)",
@@ -1172,7 +1174,7 @@ const Home = () => {
               onClick={nextTestimonial}
               style={{
                 position: "absolute",
-                right: "-60px",
+                right: "20px",
                 top: "50%",
                 transform: "translateY(-50%)",
                 background: "rgba(0,0,0,0.5)",

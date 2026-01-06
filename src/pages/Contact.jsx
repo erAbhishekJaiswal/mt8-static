@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaClock, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
-
+// const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwJXmgCDaqUJQ5EOZubYrYLPH1phxBMS0XjKDWYsalM5skwbJdY64RhTpuIWKa9uxK9/exec";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -24,28 +24,75 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus({ submitting: true, submitted: false, error: null });
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setStatus({ submitting: true, submitted: false, error: null });
 
-    try {
-      // Google Sheets integration would go here
-      // Same as Book Now page
+  //   try {
+  //     // Google Sheets integration would go here
+  //     // Same as Book Now page
       
-      setTimeout(() => {
-        setStatus({ submitting: false, submitted: true, error: null });
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
-      }, 2000);
+  //     setTimeout(() => {
+  //       setStatus({ submitting: false, submitted: true, error: null });
+  //       setFormData({
+  //         name: '',
+  //         email: '',
+  //         subject: '',
+  //         message: ''
+  //       });
+  //     }, 2000);
       
-    } catch (error) {
-      setStatus({ submitting: false, submitted: false, error: error.message });
+  //   } catch (error) {
+  //     setStatus({ submitting: false, submitted: false, error: error.message });
+  //   }
+  // };
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setStatus({ submitting: true, submitted: false, error: null });
+
+  const GOOGLE_SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbwJXmgCDaqUJQ5EOZubYrYLPH1phxBMS0XjKDWYsalM5skwbJdY64RhTpuIWKa9uxK9/exec";
+
+  try {
+    const formDataToSend = new FormData();
+
+    // Append all form fields
+    Object.entries(formData).forEach(([key, value]) => {
+      formDataToSend.append(key, value);
+    });
+
+    // Optional extra fields
+    formDataToSend.append("source", "Contact Page");
+    formDataToSend.append("timestamp", new Date().toISOString());
+
+    const response = await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      body: formDataToSend
+    });
+
+    if (!response.ok) {
+      throw new Error("Submission failed");
     }
-  };
+
+    // ✅ SUCCESS
+    setStatus({ submitting: false, submitted: true, error: null });
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: ""
+    });
+
+  } catch (error) {
+    setStatus({
+      submitting: false,
+      submitted: false,
+      error: "Something went wrong. Please try again later."
+    });
+  }
+};
+
 
   const contactInfo = [
     {
