@@ -275,6 +275,7 @@ import {
   FaChevronRight,
 } from "react-icons/fa";
 import PopupModal from "../components/PopupModal";
+import playstore from "../assets/playstore.jpeg";
 
 const Home = () => {
   const [stats, setStats] = useState({
@@ -706,6 +707,314 @@ const Home = () => {
           >
             <FaChevronRight />
           </button>
+        </div>
+      </section>
+
+            {/* Download App Section */}
+      <section
+        style={{
+          padding: "90px 0",
+          background: "linear-gradient(135deg, #1a2b4a 0%, #0a1a3a 100%)",
+        }}
+      >
+        <div className="container">
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "4rem",
+              alignItems: "center",
+            }}
+          >
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              <h2 style={{ fontSize: "2.6rem", marginBottom: "1rem" }}>
+                Download the <span style={{ color: "#00ff88" }}>MT8 App</span>
+              </h2>
+
+              <p
+                style={{
+                  fontSize: "1rem",
+                  lineHeight: "1.8",
+                  marginBottom: "1.5rem",
+                  color: "#cbd5e1",
+                }}
+              >
+                Trade smarter and faster with the official{" "}
+                <strong>Master Trade 8</strong> mobile application. Monitor live
+                trades, manage risk, withdraw profits, and stay connected —
+                anytime, anywhere.
+              </p>
+
+              {/* Steps */}
+              <ul style={{ listStyle: "none", padding: 0 }}>
+                {[
+                  "Open Google Play Store on your Android device",
+                  "Search for “Master Trade 8 (MT8)”",
+                  "Install the app securely from Play Store",
+                  "Login or register and start trading",
+                ].map((step, index) => (
+                  <li
+                    key={index}
+                    style={{
+                      marginBottom: "0.9rem",
+                      display: "flex",
+                      gap: "12px",
+                      alignItems: "flex-start",
+                      color: "#e2e8f0",
+                    }}
+                  >
+                    <span
+                      style={{
+                        minWidth: "26px",
+                        height: "26px",
+                        borderRadius: "50%",
+                        background: "linear-gradient(135deg, #00ff88, #00cc6a)",
+                        color: "#0a1a3a",
+                        fontWeight: "bold",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: "0.85rem",
+                      }}
+                    >
+                      {index + 1}
+                    </span>
+                    {step}
+                  </li>
+                ))}
+              </ul>
+
+              {/* CTA */}
+              <div
+                style={{
+                  marginTop: "2.5rem",
+                  display: "flex",
+                  gap: "1rem",
+                  flexWrap: "wrap",
+                }}
+              >
+                <a
+                  href="https://play.google.com/store"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cta-button"
+                  style={{
+                    background: "linear-gradient(135deg, #00ff88, #00cc6a)",
+                    border: "none",
+                    padding: "14px 32px",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "10px",
+                  }}
+                >
+                  Download on Play Store
+                </a>
+
+                <button
+                  onClick={() => setShowPopup(true)}
+                  className="cta-button"
+                  style={{
+                    background: "transparent",
+                    border: "2px solid #00ff88",
+                    color: "#00ff88",
+                    padding: "14px 32px",
+                  }}
+                >
+                  Get Help Installing
+                </button>
+              </div>
+            </motion.div>
+
+            {/* Right Visual */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              style={{ position: "relative" }}
+            >
+              <div
+                style={{
+                  borderRadius: "20px",
+                  padding: "30px",
+                  background: "rgba(255,255,255,0.05)",
+                  backdropFilter: "blur(12px)",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  textAlign: "center",
+                  boxShadow: "0 20px 50px rgba(0,0,0,0.4)",
+                }}
+              >
+                <a href="https://play.google.com/store/search?q=tm9&c=apps&hl=en_IN">
+                <img
+                  src={playstore}
+                  alt="MT8 Mobile App"
+                  style={{
+                    width: "100%",
+                    maxWidth: "320px",
+                    margin: "0 auto",
+                    borderRadius: "16px",
+                  }}
+                />
+                </a>
+                <p
+                  style={{
+                    marginTop: "1.2rem",
+                    fontSize: "0.9rem",
+                    color: "#94a3b8",
+                  }}
+                >
+                  Secure • Fast • Real-Time Trading
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location Support Section */}
+      <section
+        style={{
+          padding: "90px 0",
+          background: "linear-gradient(135deg, #0a1a3a 0%, #1a2b4a 100%)",
+        }}
+      >
+        <div className="container">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            style={{
+              textAlign: "center",
+              fontSize: "2.5rem",
+              marginBottom: "1rem",
+            }}
+          >
+            Local <span style={{ color: "#00ff88" }}>WhatsApp Support</span>
+          </motion.h2>
+
+          <p
+            style={{
+              textAlign: "center",
+              maxWidth: "650px",
+              margin: "0 auto 3.5rem",
+              color: "#cbd5e1",
+              fontSize: "1rem",
+              lineHeight: "1.7",
+            }}
+          >
+            Connect instantly with our regional support team. Click on your city
+            to chat directly on WhatsApp for trading assistance, account setup,
+            or general queries.
+          </p>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))",
+              gap: "2rem",
+            }}
+          >
+            {[
+              {
+                city: "Mumbai",
+                phone: "919999999999",
+              },
+              {
+                city: "Delhi",
+                phone: "918888888888",
+              },
+              {
+                city: "Chennai",
+                phone: "917777777777",
+              },
+              {
+                city: "Lucknow",
+                phone: "916666666666",
+              },
+            ].map((location, index) => {
+              const message = encodeURIComponent(
+                `Hello MT8 Team, I am contacting from ${location.city}. I would like to know more about your trading services.`
+              );
+
+              return (
+                <motion.a
+                  key={index}
+                  href={`https://wa.me/${location.phone}?text=${message}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  style={{
+                    textDecoration: "none",
+                  }}
+                >
+                  <div
+                    style={{
+                      background: "rgba(255,255,255,0.05)",
+                      border: "1px solid rgba(255,255,255,0.1)",
+                      borderRadius: "18px",
+                      padding: "2rem",
+                      height: "100%",
+                      textAlign: "center",
+                      backdropFilter: "blur(12px)",
+                      boxShadow: "0 20px 40px rgba(0,0,0,0.35)",
+                      transition: "all 0.3s ease",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "60px",
+                        height: "60px",
+                        margin: "0 auto 1rem",
+                        borderRadius: "50%",
+                        background: "linear-gradient(135deg, #00ff88, #00cc6a)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: "1.5rem",
+                        fontWeight: "bold",
+                        color: "#0a1a3a",
+                      }}
+                    >
+                      {location.city.charAt(0)}
+                    </div>
+
+                    <h3 style={{ marginBottom: "0.5rem" }}>{location.city}</h3>
+
+                    <p
+                      style={{
+                        fontSize: "0.95rem",
+                        color: "#94a3b8",
+                        marginBottom: "1.2rem",
+                      }}
+                    >
+                      WhatsApp Support
+                    </p>
+
+                    <span
+                      style={{
+                        display: "inline-block",
+                        padding: "10px 22px",
+                        borderRadius: "30px",
+                        background: "linear-gradient(135deg, #00ff88, #00cc6a)",
+                        color: "#0a1a3a",
+                        fontWeight: "bold",
+                        fontSize: "0.9rem",
+                      }}
+                    >
+                      Chat Now
+                    </span>
+                  </div>
+                </motion.a>
+              );
+            })}
+          </div>
         </div>
       </section>
 
